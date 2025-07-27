@@ -8,6 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
+
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
+            <a href="{{ url('/') }}" class="inline-block px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-600">
+    ← Home
+</a>
+
     <div class="w-full max-w-md bg-white rounded-xl shadow-md p-6">
         <h2 class="text-2xl font-bold text-center mb-6">Login to Your Account</h2>
 
@@ -29,8 +37,8 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+
+
 
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
